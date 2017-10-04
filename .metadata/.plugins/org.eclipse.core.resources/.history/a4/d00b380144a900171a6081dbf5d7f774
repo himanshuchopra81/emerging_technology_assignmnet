@@ -1,0 +1,36 @@
+package activity;
+
+import java.util.Scanner;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class OddEven {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner (System.in);
+		init();
+		
+	}
+	public static void init() {
+		JFrame jf = new JFrame();
+		JLabel enter = new JLabel("Enter any number");
+		JTextField jt = new JTextField();
+		JButton calc = new JButton("CHECK");
+		
+		jf.setBounds(0, 0, 600, 600);
+		enter.setBounds(10, 10, 100, 20);
+		jt.setBounds(120, 10, 100, 20);
+		//calc.setBounds(20, 210, 10, 20);
+		jf.add(enter);
+		jf.add(jt);
+	//	jf.add(calc);
+		jf.setVisible(true);
+		
+		
+	}
+	public boolean checkIfOddEven(int a) {
+		
+	}
+}

@@ -1,0 +1,19 @@
+package activity;
+
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+
+public class OddEven {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner (System.in);
+		init();
+		
+	}
+	public static void init() {
+		JFrame jf = new JFrame();
+		jf.setVisible(true);
+		jf.setBounds(200, 200, 600, 600);
+		
+	}
+}
