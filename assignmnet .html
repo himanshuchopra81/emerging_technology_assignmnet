@@ -1,0 +1,157 @@
+<html>
+ 
+<head>
+ 
+    <title>Registration Form</title>
+ 
+    <script type="text/javascript">
+        function validate_form() {
+            if (document.emp.emp_name.value == "") {
+                alert("Please fill in the 'Your Employee Name' box.");
+                return false;
+            }
+            if (document.emp.num.value == "") {
+                alert("Enter Employee Number");
+                return false;
+            }
+            alert("sucessfully Submitted");
+ 
+ 
+ 
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value)) {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+        }
+ 
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+                (charCode < 48 || charCode > 57)) {
+                alert("Enter Number");
+                return false;
+            }
+            return true;
+        }
+ 
+ 
+        //-->
+    </script>
+ 
+</head>
+ 
+<body bgcolor="#FFFFFF">
+    <form  name="emp" action="" onsubmit="return validate_form();" method="post">
+        <table style="background-color: 46CD9A;" align="center" width=10% width="10%" cellspacing="2" cellpadding="2" border="5">
+            <tr>
+                <td colspan="2" align="center"><b>Student Registration Form</b></td>
+ 
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Name<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+            </tr>
+			
+            <tr>
+                <td align="left" valign="top" width="41%">Father Number<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+			<tr>
+                <td align="left" valign="top" width="41%">Postal Address<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+            </tr>
+			
+            <tr>
+                <td align="left" valign="top" width="41%">Personal Address<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Sex</td>
+				<td>
+                <fieldset id="group1">
+					<input type="radio" value="Male" name="group1">Male
+					<input type="radio" value="Female" name="group1">Female
+				</fieldset></td>
+            </tr>
+			  <tr>
+                <td align="left" valign="top" width="41%">City</td>
+                <td width="57%"><select name="mydropdown">
+					<option value="Default">Select..</option>
+					<option value="Chennai">Brampton</option>
+					<option value="Bangalore">Mississauga</option>
+					<option value="Chennai">Toronto</option>
+					<option value="Bangalore">Etobicoke</option>
+					
+					 
+				</select></td>
+ 
+            </tr>
+			 <tr>
+                <td align="left" valign="top" width="41%">Course</td>
+                <td width="57%"><select name="mydropdown">
+					<option value="Default">Select..</option>
+					<option value="Chennai">CPCM</option>
+					<option value="Bangalore">BINM</option>
+					<option value="Chennai">BMIM</option>
+					<option value="Bangalore">SCIM</option>										 
+				</select></td> 
+            </tr>
+			 <tr>
+                <td align="left" valign="top" width="41%">District</td>
+                <td width="57%"><select name="mydropdown">
+					<option value="Default">Select..</option>
+					<option value="Chennai">D1</option>
+					<option value="Bangalore">D2</option>
+					<option value="Chennai">D3</option>
+					<option value="Bangalore">D4</option>										 
+				</select></td> 
+            </tr>
+			<tr>
+                <td align="left" valign="top" width="41%">State</td>
+                <td width="57%"><select name="mydropdown">
+					<option value="Default">Select..</option>
+					<option value="Chennai">Ontario</option>
+					<option value="Bangalore">British Columbia</option>
+					<option value="Chennai">Ottawa</option>
+					
+				</select></td> 
+            </tr>
+			<tr>
+                <td align="left" valign="top" width="41%">PinCode<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+			<tr>
+                <td align="left" valign="top" width="41%">EmailId<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+			<tr>
+                <td align="left" valign="top" width="41%">DOB<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+			<tr>
+                <td align="left" valign="top" width="41%">MobileNo<span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+            </tr>
+			
+			
+ 
+            <tr>
+                <td colspan="2">
+                    <p align="center">
+                        <input type="reset" value="Reset" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" value="Submit Form" name="B5"></td>
+            </tr>
+ 
+        </table>
+    </form>
+</body>
+ 
+</html>
