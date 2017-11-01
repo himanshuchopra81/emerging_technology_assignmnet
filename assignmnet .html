@@ -6,20 +6,41 @@
  
     <script type="text/javascript">
         function validate_form() {
-            if (document.emp.emp_name.value == "") {
-                alert("Please fill in the 'Your Employee Name' box.");
+            if (document.stu.stu_name.value == "") {
+                alert("Enter Student Name");
                 return false;
             }
-            if (document.emp.num.value == "") {
-                alert("Enter Employee Number");
+			 if (document.stu.father_name.value == "") {
+                alert("Enter father's Name");
                 return false;
             }
+           
+			
+			if (document.stu.personal_add.value == "") {
+                alert("Enter Personal Address");
+                return false;
+            }
+			
+			
+			if (document.stu.num.value == "") {
+                alert("Enter stuloyee Number");
+                return false;
+            }
+			
+			
+			
             alert("sucessfully Submitted");
+			
+			
+			if (!(/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/).test(document.stu.postal_add.value)) {
+                alert("You have entered an invalid postal address!");
+                return false;
+            }
  
  
  
-            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value)) {
-                alert("You have entered an invalid email address!")
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.stu.email_id.value)) {
+                alert("You have entered an invalid email address!");
                 return (false)
             }
         }
@@ -41,7 +62,7 @@
 </head>
  
 <body bgcolor="#FFFFFF">
-    <form  name="emp" action="" onsubmit="return validate_form();" method="post">
+    <form  name="stu" action="" onsubmit="return validate_form();" method="post">
         <table style="background-color: 46CD9A;" align="center" width=10% width="10%" cellspacing="2" cellpadding="2" border="5">
             <tr>
                 <td colspan="2" align="center"><b>Student Registration Form</b></td>
@@ -50,24 +71,24 @@
             <tr>
                 <td align="left" valign="top" width="41%">Name<span style="color:red">*</span></td>
  
-                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+                <td width="57%"><input type="text" value="" name="stu_name" size="24"></td>
             </tr>
 			
             <tr>
-                <td align="left" valign="top" width="41%">Father Number<span style="color:red">*</span></td>
+                <td align="left" valign="top" width="41%">Father Name<span style="color:red">*</span></td>
                 <td width="57%">
-                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+                    <input type="text" value="" name="father_name" size="24"></td>
             </tr>
 			<tr>
                 <td align="left" valign="top" width="41%">Postal Address<span style="color:red">*</span></td>
  
-                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+                <td width="57%"><input type="text" value="" name="postal_add" size="24"></td>
             </tr>
 			
             <tr>
                 <td align="left" valign="top" width="41%">Personal Address<span style="color:red">*</span></td>
                 <td width="57%">
-                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+                    <input type="text" value="" name="personal_add"  size="24"></td>
             </tr>
             <tr>
                 <td align="left" valign="top" width="41%">Sex</td>
@@ -128,7 +149,7 @@
 			<tr>
                 <td align="left" valign="top" width="41%">EmailId<span style="color:red">*</span></td>
                 <td width="57%">
-                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
+                    <input type="text" value="" name="email_id" onkeypress="return isNumberKey(event)" size="24"></td>
             </tr>
 			<tr>
                 <td align="left" valign="top" width="41%">DOB<span style="color:red">*</span></td>
